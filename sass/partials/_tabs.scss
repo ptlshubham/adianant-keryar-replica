@@ -1,0 +1,59 @@
+/*====================================================
+   single-case
+====================================================*/
+.tab-content-shared {
+  .nav-tabs {
+    border-bottom: none;
+    li {
+      @media #{$small_mobile_four} {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      a {
+        background-color: $theme-color;
+        color: $color-light;
+        font-size: $display-4;
+        text-transform: capitalize;
+        font-weight: $font-weight-semi-bold;
+        @include border-radius(4px);
+        position: relative;
+        padding: 12px 30px;
+        margin-right: 5px;
+        border: none;
+        &:after {
+          position: absolute;
+          content: '';
+          left: 50%;
+          bottom: -10px;
+          @include transform(translateX(-50%));
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid transparent;
+        }
+        &.active {
+          background-color: $theme-color-2;
+          &:after {
+            border-top: 10px solid $theme-color-2;
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    margin-top: 25px;
+    .tab-desc-box {
+      background-color: $color-light;
+      padding: 22px 25px;
+      @include box-shadow(0 0 40px rgba(82, 85, 90, 0.1));
+      @include border-radius(4px);
+      .tab__desc {
+        font-size: $default-font;
+        color: $theme-color-4;
+        font-weight: $font-weight-medium;
+        line-height: $text-height-2;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+/*====== theme-button ======*/
+.theme-button {
+  font-weight: $font-weight-medium;
+  font-size: $default-font;
+  color: $color-light;
+  line-height: 50px;
+  padding-left: 30px;
+  padding-right: 40px;
+  background-color: $theme-color;
+  @include border-radius(4px);
+  text-transform: capitalize;
+  @include transition(0.3s);
+  @include box-shadow(0 0 40px rgba(82, 85, 90, 0.1));
+  position: relative;
+  display: inline-block;
+  .btn-icon {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    font-size: $default-font-3;
+    @include transition(0.3s);
+    @include transform(translateY(-50%));
+  }
+  &:hover {
+    background-color: $theme-color-2;
+    color: $color-light;
+    text-decoration: none;
+    .btn-icon {
+      right: 22px;
+    }
+  }
+}
+.text-btn {
+  color: $theme-color;
+  text-transform: capitalize;
+  @include transition(0.3s);
+  font-weight: $font-weight-medium;
+  font-size: $default-font;
+  i {
+    margin-left: 5px;
+  }
+  &:hover {
+    color: $theme-color-2;
+  }
+}
+.btn-google {
+  background-color: $alter-color-5;
+}
+.btn-facebook {
+  background-color: $alter-color-6;
+}
+.btn-twitter {
+  background-color: $alter-color-2;
+}
+.button-shared {
+  i {
+    margin-right: 5px;
+  }
+}

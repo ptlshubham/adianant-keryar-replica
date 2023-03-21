@@ -1,0 +1,58 @@
+/*====================================================
+   chart-area
+ ====================================================*/
+.chart-item {
+  margin-top: -8px;
+  @media #{$tab_device} {
+    margin-bottom: 100px;
+  }
+  @media #{$large_mobile} {
+    margin-bottom: 100px;
+  }
+  @media #{$small_mobile} {
+    margin-bottom: 100px;
+  }
+  @media #{$small_mobile_two} {
+    margin-bottom: 80px;
+  }
+  .sec-heading {
+    .sec__title {
+      margin-bottom: 28px;
+    }
+    .sec__desc {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.chart-area {
+  padding-top: 115px;
+  padding-bottom: 115px;
+  @media #{$tab_device} {
+    padding-top: 104px;
+  }
+  .col-lg-6 {
+    @media #{$tab_device} {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  .chart-wrapper {
+    .chart-img {
+      text-align: center;
+      @media #{$large_mobile_two} {
+        margin-bottom: 30px;
+      }
+      @media #{$small_mobile_two} {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/*====================================================
+   chart-area2
+ ====================================================*/
+.chart-area2 {
+  padding-bottom: 100px;
+}

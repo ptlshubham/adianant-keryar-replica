@@ -1,0 +1,104 @@
+/*====================================================
+   newsleller-area
+====================================================*/
+.newsleller-area {
+  padding-top: 75px;
+  padding-bottom: 88px;
+  position: relative;
+  @media #{$large_mobile_three} {
+    padding-top: 99px;
+  }
+  .col-lg-5,
+  .col-lg-7 {
+    @media #{$tab_device} {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  .sec-heading {
+    @media #{$tab_device} {
+      text-align: center;
+    }
+    @media #{$large_mobile} {
+      text-align: center;
+    }
+    @media #{$small_mobile} {
+      text-align: center;
+    }
+    .sec__title {
+      line-height: 54px;
+      @media #{$tab_device} {
+        margin-bottom: 50px;
+      }
+      @media #{$large_mobile} {
+        margin-bottom: 50px;
+      }
+      @media #{$large_mobile_three} {
+        line-height: 45px;
+      }
+      @media #{$small_mobile} {
+        margin-bottom: 50px;
+      }
+      @media #{$small_mobile_four} {
+        line-height: 50px;
+      }
+    }
+  }
+  .news-heading {
+    margin-bottom: 50px;
+    .sec__title {
+      margin-bottom: 10px;
+    }
+  }
+  .contact-form-action {
+    padding-left: 0;
+    .theme-button {
+      width: 100%;
+    }
+  }
+}
+/*====================================================
+    newsleller-area3
+ ====================================================*/
+.newsleller-area2 {
+  @media #{$small_mobile} {
+    padding-top: 30px;
+  }
+}
+.newsleller-area2,
+.newsleller-area3 {
+  padding-bottom: 30px;
+}
+/*====================================================
+    newsleller-area3
+ ====================================================*/
+.newsleller-area3 {
+  padding-top: 110px;
+}
+/*====================================================
+    newsleller-area4
+ ====================================================*/
+.newsleller-area4 {
+  padding-top: 60px;
+  @media #{$small_mobile_two} {
+    padding-top: 30px;
+  }
+}
+/*====================================================
+    newsleller-area5
+ ====================================================*/
+.newsleller-area5 {
+  padding-top: 113px;
+  padding-bottom: 30px;
+  @media #{$small_mobile_two} {
+    padding-top: 80px;
+  }
+}
+/*====================================================
+    newsleller-area5
+ ====================================================*/
+.newsleller-area6 {
+  padding-top: 89px;
+  padding-bottom: 30px;
+}

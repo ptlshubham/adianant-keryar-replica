@@ -1,0 +1,110 @@
+/*====================================================
+    breadcrumb-area
+ ====================================================*/
+.breadcrumb__title {
+  font-size: $display;
+  text-transform: capitalize;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  @media #{$large_mobile} {
+    font-size: $primary-font;
+  }
+  @media #{$small_mobile} {
+    font-size: $display-3;
+  }
+}
+.breadcrumb__list {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: $color-light;
+  padding: 10px 32px;
+  @include transform(translateX(-50%));
+  @include border-radius(30px);
+  margin-bottom: -22px;
+  @include box-shadow(0 10px 40px rgba(82, 85, 90, 0.1));
+  @media #{$large_mobile} {
+    width: 70%;
+    text-align: center;
+  }
+  @media #{$small_mobile} {
+    width: 100%;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    text-transform: capitalize;
+    color: $theme-color-4;
+    font-size: $default-font;
+    font-weight: $font-weight-medium;
+    position: relative;
+    padding-right: 22px;
+    @media #{$large_mobile_three} {
+      font-size: $default-font-2;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    a {
+      color: $theme-color;
+      @include transition(0.3s);
+      &:hover {
+        color: $theme-color-2;
+      }
+    }
+    &.active__list-item {
+      &:after {
+        position: absolute;
+        content: '.';
+        top: -6px;
+        right: 0;
+        padding: 0 6px;
+        font-size: $display-12;
+      }
+    }
+  }
+}
+.breadcrumb-area {
+  background-color: $color-1;
+  padding-top: 285px;
+  position: relative;
+  z-index: 2;
+  color: $color-light;
+  background-image: url("../images/breadcrumb-bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  @media #{$laptop_m_four} {
+    padding-top: 300px;
+  }
+  @media #{$large_mobile} {
+    padding-top: 280px;
+  }
+  @media #{$small_mobile} {
+    padding-top: 280px;
+  }
+  .breadcrumb-content {
+    position: relative;
+    padding-bottom: 155px;
+    @media #{$laptop_m_four} {
+      padding-bottom: 135px;
+    }
+    @media #{$large_mobile} {
+     padding-bottom: 100px;
+    }
+    @media #{$large_mobile_three} {
+      padding-bottom: 80px;
+    }
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $theme-color;
+    opacity: .9;
+    z-index: -1;
+  }
+}

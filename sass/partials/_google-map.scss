@@ -1,0 +1,28 @@
+/*====================================================
+    map
+ ====================================================*/
+.gmaps {
+  position: relative;
+  padding-bottom: 50px;
+  .col-lg-8,
+  .col-lg-4 {
+    @media #{$tab_device} {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  #map {
+    width: 100%;
+    height: 815px;
+    @media #{$tab_device} {
+      height: 450px;
+    }
+    @media #{$large_mobile} {
+      height: 450px;
+    }
+    @media #{$small_mobile} {
+      height: 400px;
+    }
+  }
+}

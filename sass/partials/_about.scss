@@ -1,0 +1,296 @@
+/*====================================================
+    about-area
+ ====================================================*/
+.about-item {
+  .sec-heading {
+    .sec__title {
+      margin-bottom: 28px;
+    }
+    .readmore__btn {
+      margin-top: 20px;
+    }
+  }
+  .about-content {
+    .aboutsupport-wrap {
+      margin-top: 33px;
+    }
+  }
+}
+.aboutsupport-item {
+  background-color: $color-light;
+  @include border-radius(4px);
+  @include box-shadow(0 0 40px rgba(82, 85, 90, 0.1));
+  @include transition(0.3s);
+  position: relative;
+  padding: 50px 20px 33px 20px;
+  text-align: center;
+  margin-bottom: 41px;
+  overflow: hidden;
+  .aboutsupport__svg {
+    svg {
+      fill: $theme-color-2;
+      width: 55px;
+    }
+  }
+  .aboutsupport__icon {
+    color: $theme-color-2;
+    &:before {
+      font-size: $display-11;
+    }
+  }
+  .aboutsupport__title {
+    font-size: $display-4;
+    color: $theme-color;
+    font-weight: $font-weight-bold;
+    line-height: 22px;
+    margin-top: 25px;
+    @include transition(0.3s);
+    @media #{$laptop_m_four} {
+      font-size: $default-font;
+      line-height: 20px;
+    }
+    @media #{$tab_device} {
+      font-size: $display-4;
+      line-height: 22px;
+    }
+    @media #{$large_mobile} {
+      font-size: $display-4;
+      line-height: 22px;
+    }
+    @media #{$small_mobile} {
+      font-size: $display-4;
+      line-height: 22px;
+    }
+  }
+  .aboutsupport__text {
+    color: $theme-color-4;
+    font-weight: $font-weight-medium;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $theme-color-2;
+    left: 0;
+    @include border-radius(4px);
+    @include transform(scale(0));
+    @include transition(0.3s);
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    top: -27px;
+    right: -39px;
+    width: 70px;
+    height: 60px;
+    background-color: $theme-color-5;
+    @include transform(rotate(45deg));
+  }
+  &:hover {
+    .aboutsupport__title {
+      color: $theme-color-2;
+    }
+    &:after {
+      @include transform(scale(1));
+    }
+  }
+}
+.image-boxes {
+  margin-top: 7px;
+  position: relative;
+  @media #{$tab_device} {
+    margin-top: 60px;
+  }
+  @media #{$large_mobile} {
+    margin-top: 60px;
+  }
+  @media #{$small_mobile} {
+    margin-top: 60px;
+  }
+  .about-img {
+    width: 100%;
+    @include border-radius(4px);
+    position: relative;
+    @include box-shadow(0 0 40px rgba(82, 85, 90, 0.1));
+    &:nth-child(1) {
+      position: absolute;
+      bottom: -130px;
+      left: -50px;
+      z-index: 1;
+      width: 75%;
+      @media #{$tab_device} {
+        position: inherit;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      @media #{$large_mobile} {
+        position: inherit;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      @media #{$small_mobile} {
+        position: inherit;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      bottom: -270px;
+      right: 15px;
+      width: 65%;
+      z-index: 2;
+      @media #{$laptop_m_four} {
+        bottom: -200px;
+      }
+      @media #{$tab_device} {
+        position: inherit;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 30px;
+      }
+      @media #{$large_mobile} {
+        position: inherit;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 30px;
+      }
+      @media #{$small_mobile} {
+        position: inherit;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+  }
+  .video-play-btn {
+    position: absolute;
+    top: 96%;
+    left: 33%;
+    @include transform(translate(-50%, 50%));
+    color: $theme-color;
+    font-size: $display-4;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    @include border-radius(50%);
+    background-color: $color-light;
+    text-transform: capitalize;
+    font-weight: $font-weight-bold;
+    @include transition(0.3s);
+    z-index: 2;
+    @include box-shadow(0 0 40px rgba(82, 85, 90, 0.2));
+    &:hover {
+      background-color: $theme-color-2;
+      color: $color-light;
+    }
+    @media #{$laptop_m_four} {
+      top: 80%;
+    }
+    @media #{$tab_device} {
+      position: inherit;
+      top: auto;
+      left: 50%;
+      @include transform(translateX(-50%));
+      bottom: 0;
+      margin-top: -50px;
+      display: block;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+    }
+    @media #{$large_mobile} {
+      position: inherit;
+      top: auto;
+      left: 50%;
+      @include transform(translateX(-50%));
+      bottom: 0;
+      margin-top: -50px;
+      display: block;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+    }
+    @media #{$small_mobile} {
+      position: inherit;
+      top: auto;
+      left: 50%;
+      @include transform(translateX(-50%));
+      bottom: 0;
+      margin-top: -50px;
+      display: block;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+    }
+  }
+}
+
+.about-area {
+  padding-top: 106px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  .col-lg-6,
+  .col-lg-5 {
+    @media #{$tab_device} {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  &:before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    content: '';
+    background-image: url("../images/dots3.png");
+    background-position: center;
+    @include transform(rotate(-10deg));
+    z-index: -1;
+    opacity: 0.1;
+  }
+}
+/*====================================================
+    about-area2
+ ====================================================*/
+.about-area2 {
+  padding-top: 115px;
+}
+/*====================================================
+    about-area3
+ ====================================================*/
+.about-area3 {
+  padding-top: 120px;
+  .col-lg-3 {
+    @media #{$tab_device} {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  .aboutsupport-item {
+    padding-right: 30px;
+    padding-left: 30px;
+    .aboutsupport__title {
+      font-size: $display-2;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+  }
+}

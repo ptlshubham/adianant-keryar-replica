@@ -1,0 +1,48 @@
+.blockquote-content {
+  background-color: $theme-color;
+  position: relative;
+  z-index: 1;
+  color: $color-light-2;
+  border-left-color: $color-light-2;
+  padding: 30px 35px 38px 35px;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  .qoute__desc {
+    font-size: $display-4;
+    font-weight: $font-weight-semi-bold;
+    font-style: italic;
+    line-height: $text-height-2;
+  }
+  .qoute__meta {
+    color: $color-light;
+    font-weight: $font-weight-semi-bold;
+    margin-top: 24px;
+    span {
+      color: $color-light-2;
+      font-size: $default-font;
+    }
+  }
+  i {
+    font-size: 100px;
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    opacity: 0.4;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $theme-color-4;
+    -ms-text-stroke-color: $theme-color-4;
+    -o-text-stroke-color: $theme-color-4;
+    color: transparent;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    left: -5px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 0;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $color-light;
+  }
+}

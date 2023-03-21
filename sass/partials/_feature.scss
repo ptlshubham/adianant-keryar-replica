@@ -1,0 +1,117 @@
+/*====================================================
+    feature-area
+ ====================================================*/
+.feature-area {
+  padding-top: 113px;
+  padding-bottom: 75px;
+  position: relative;
+  @media #{$small_mobile} {
+    padding-top: 100px;
+  }
+  .feature-box {
+    .col-lg-4 {
+      @media #{$tab_device} {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+  }
+  .sec-heading {
+    .sec__title {
+      line-height: 55px;
+      @media #{$large_mobile_three} {
+        line-height: 40px;
+      }
+    }
+  }
+  .service-button {
+    margin-top: 80px;
+    text-align: right;
+    @media #{$large_mobile} {
+      text-align: left;
+      margin-top: 30px;
+      margin-bottom: 35px;
+    }
+    @media #{$small_mobile} {
+      text-align: left;
+      margin-top: 30px;
+      margin-bottom: 35px;
+    }
+  }
+  .feature-box {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+
+/*====================================================
+    feature-area 2
+ ====================================================*/
+.feature-area2 {
+  background-color: $theme-color;
+  z-index: 1;
+  padding-top: 120px;
+  padding-bottom: 90px;
+  position: relative;
+  overflow: hidden;
+  .feature-box {
+    margin-top: 0;
+    .feature-item {
+      padding: 59px 30px 38px 30px;
+      z-index: 1;
+      @include border-radius(4px);
+      .feature__icon {
+        margin-top: 0;
+      }
+      .read__btn {
+        font-size: $default-font;
+        color: $theme-color;
+        font-weight: $font-weight-semi-bold;
+        text-transform: capitalize;
+        @include transition(0.3s);
+        position: relative;
+        padding-right: 35px;
+        margin-top: 18px;
+        display: inline-block;
+        .fa__arrow {
+          position: absolute;
+          right: 25px;
+          top: 50%;
+          @include transform(translateY(-50%));
+          @include transition(0.3s);
+          font-size: $default-font-3;
+        }
+        &:hover {
+          color: $theme-color-2;
+          .fa__arrow {
+            right: 22px;
+          }
+        }
+      }
+      &:hover {
+        @include border-radius(4px);
+      }
+    }
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    background-image: url("../images/dots3.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+  }
+}
+/*====================================================
+    feature-area 3
+ ====================================================*/
+.feature-area3 {
+  padding-bottom: 90px;
+}

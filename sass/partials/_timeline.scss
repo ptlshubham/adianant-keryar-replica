@@ -1,0 +1,350 @@
+/*======================================
+        timeline-area
+ ======================================*/
+.timeline-area {
+  padding-top: 113px;
+  padding-bottom: 104px;
+  @media #{$tab_device} {
+    padding-top: 102px;
+  }
+  .timeline-list {
+    .happening {
+      .col-lg-6,
+      .col-lg-8 {
+        @media #{$tab_device} {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .happening-period {
+        position: relative;
+        z-index: 1;
+        .happeing__img {
+          width: 100%;
+          @include border-radius(4px);
+          @include box-shadow(0 0 40px rgba(82, 85, 90, 0.2));
+        }
+        .happening-desc-box {
+          margin-top: 25px;
+          padding: 24px;
+          color: $theme-color;
+          background-color: $color-light;
+          @include box-shadow(0 0 40px rgba(82, 85, 90, 0.02));
+          @include border-radius(30px);
+          @media #{$tab_device} {
+            padding: 40px;
+          }
+          @media #{$large_mobile} {
+            padding: 40px;
+          }
+          @media #{$small_mobile} {
+            padding: 40px;
+          }
+          .sec__desc {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .trusted-img {
+        .video-box {
+          position: absolute;
+          right: -15px;
+          bottom: -25px;
+          text-align: center;
+          background-color: $theme-color;
+          color: $color-light;
+          padding: 20px 30px;
+          @include border-radius(10px);
+          @media #{$extra-device} {
+            right: 15px;
+            bottom: 15px;
+            @include border-radius(10px);
+          }
+          .video-play-btn {
+            width: 53px;
+            height: 53px;
+            line-height: 53px;
+            color: $theme-color;
+            background-color: $color-light;
+            display: inline-block;
+            @include border-radius(50%);
+            font-size: $display-4;
+            @include transition(0.3s);
+            position: relative;
+            &:before {
+              position: absolute;
+              content: '';
+              left: 50%;
+              top: -4px;
+              width: 30px;
+              height: 12px;
+              @include border-radius(50%);
+              background-color: $theme-color;
+              @include transform(translateX(-50%));
+            }
+          }
+          p {
+            margin-top: 5px;
+            font-size: $default-font;
+            font-weight: $font-weight-medium;
+          }
+          &:hover {
+            .video-play-btn {
+              background-color: $theme-color-2;
+              color: $color-light;
+            }
+          }
+        }
+        &:after {
+          position: absolute;
+          content: '';
+          background-image: url(../images/dots.png);
+          background-size: cover;
+          background-position: center;
+          left: -55px;
+          bottom: -150px;
+          z-index: -1;
+          height: 90%;
+          width: 90%;
+          opacity: 0.2;
+          @media #{$extra-device} {
+            display: none;
+          }
+        }
+      }
+      .happening-period2 {
+        .happeing__img {
+          &:nth-child(1) {
+            width: 48%;
+            z-index: 3;
+            position: relative;
+            @include border-radius(30px);
+            @media #{$laptop_m_two} {
+              width: 50%;
+            }
+            @media #{$tab_device} {
+              position: inherit;
+              width: 100%;
+              @include border-radius(4px);
+            }
+            @media #{$large_mobile} {
+              position: inherit;
+              width: 100%;
+              @include border-radius(4px);
+            }
+            @media #{$small_mobile} {
+              position: inherit;
+              width: 100%;
+              @include border-radius(4px);
+            }
+          }
+          &:nth-child(2) {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 48%;
+            @include border-radius(30px);
+            @media #{$tab_device} {
+              top: auto;
+              right: auto;
+              position: inherit;
+              width: 100%;
+              @include border-radius(4px);
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+            @media #{$large_mobile} {
+              position: inherit;
+              top: auto;
+              right: auto;
+              width: 100%;
+              @include border-radius(4px);
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+            @media #{$small_mobile} {
+              top: auto;
+              right: auto;
+              position: inherit;
+              width: 100%;
+              @include border-radius(4px);
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+      .happening-content {
+        padding-left: 15px;
+        @media #{$tab_device} {
+          margin-bottom: 60px;
+          padding-left: 0;
+        }
+        @media #{$large_mobile} {
+          margin-bottom: 60px;
+          padding-left: 0;
+        }
+        @media #{$small_mobile} {
+          margin-bottom: 60px;
+          padding-left: 0;
+        }
+        .sec-heading {
+          margin-bottom: 30px;
+          .sec__desc {
+            padding-right: 50px;
+            @media #{$tab_device} {
+              padding-right: 0;
+            }
+            @media #{$large_mobile} {
+              padding-right: 0;
+            }
+            @media #{$small_mobile} {
+              padding-right: 0;
+            }
+          }
+        }
+        .sofa-item {
+          .sec-heading {
+            .sec__desc {
+              padding-right: 0;
+            }
+          }
+        }
+        .list-items {
+          margin-bottom: 41px;
+        }
+        &:hover {
+          .time__title {
+            &:after {
+              @include transform(scale(1));
+            }
+          }
+        }
+      }
+    }
+    .happening2 {
+      padding-top: 80px;
+      position: relative;
+      @media #{$tab_device} {
+        padding-top: 60px;
+      }
+      @media #{$large_mobile} {
+        padding-top: 30px;
+      }
+      @media #{$small_mobile} {
+        padding-top: 30px;
+      }
+      .happening-content2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: $color-light;
+        width: 550px;
+        padding: 33px 25px 45px 44px;
+        @media #{$tab_device} {
+          position: inherit;
+          top: auto;
+          bottom: auto;
+          width: auto;
+          margin-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+          margin-right: 15px;
+          margin-left: 15px;
+        }
+        @media #{$large_mobile} {
+          position: inherit;
+          top: auto;
+          bottom: auto;
+          width: auto;
+          margin-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+          margin-right: 15px;
+          margin-left: 15px;
+        }
+        @media #{$small_mobile} {
+          position: inherit;
+          top: auto;
+          bottom: auto;
+          width: auto;
+          margin-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+          margin-right: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+/*======================================
+        timeline-area2
+ ======================================*/
+.timeline-area2 {
+  background-color: $color-light-grey;
+  padding-top: 120px;
+  padding-bottom: 134px;
+  @media #{$laptop_m_four} {
+    padding-bottom: 105px;
+  }
+  @media #{$tab_device} {
+    padding-bottom: 58px;
+  }
+  @media #{$large_mobile} {
+    padding-bottom: 58px;
+  }
+  @media #{$large_mobile_three} {
+    padding-top: 100px;
+  }
+  @media #{$small_mobile} {
+    padding-bottom: 58px;
+  }
+}
+/*====================================================
+    sofa-area
+ ====================================================*/
+.timeline-area.sofa-area {
+  background-color: $color-light-grey;
+  padding-bottom: 120px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @media #{$small_mobile_two} {
+    padding-bottom: 70px;
+  }
+  .timeline-list {
+    .happening {
+      .happening-period {
+        .happeing__img {
+          margin-top: 50px;
+          @include box-shadow(0 0 0 0);
+          @include border-radius(0 0 0 0);
+        }
+      }
+      .happening-content {
+        .sofa__title {
+          font-size: $display-4;
+        }
+      }
+    }
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 42%;
+    height: 88%;
+    background-image: url(../images/dots3.png);
+    background-position: center;
+    z-index: -1;
+    opacity: 0.1;
+    @include transform(rotate(-13deg));
+  }
+}

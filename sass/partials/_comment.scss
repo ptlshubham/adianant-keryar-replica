@@ -1,0 +1,185 @@
+.comment {
+  border: 1px solid $color-1;
+  padding: 30px 30px 30px 20px;
+  @include border-radius(4px);
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flex;
+  display: flex;
+  @media #{$large_mobile} {
+   display: block;
+    text-align: center;
+  }
+  @media #{$small_mobile} {
+   display: block;
+    text-align: center;
+  }
+  .avatar__img {
+    width: 100px;
+    height: 100px;
+    @include border-radius(50%);
+    margin-right: 20px;
+    border: 8px solid $color-light;
+    @include box-shadow(0 0 40px rgba(82, 85, 90, 0.1));
+    @media #{$large_mobile} {
+      margin-right: 0;
+    }
+    @media #{$small_mobile} {
+      margin-right: 0;
+    }
+  }
+  .comment-body {
+    @media #{$large_mobile} {
+      margin-top: 25px;
+    }
+    @media #{$small_mobile} {
+      margin-top: 25px;
+    }
+    .meta-data {
+      display: -webkit-box;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      @media #{$large_mobile} {
+        display: block;
+      }
+      @media #{$small_mobile} {
+        display: block;
+      }
+      .comment__author {
+        font-size: $display-2;
+        text-transform: capitalize;
+        color: $theme-color;
+        font-weight: $font-weight-semi-bold;
+        margin-bottom: 12px;
+        display: inline-block;
+      }
+      .comment__date {
+        font-size: $default-font;
+        color: $theme-color-4;
+        font-weight: $font-weight-medium;
+        @media #{$large_mobile} {
+          display: block;
+          margin-bottom: 20px;
+          margin-top: -5px;
+        }
+        @media #{$small_mobile} {
+          display: block;
+          margin-bottom: 20px;
+          margin-top: -5px;
+        }
+      }
+    }
+    .review__stars{
+      display: -webkit-box;
+      display: -ms-flex;
+      display: flex;
+      margin-bottom: 5px;
+      li {
+        color: $theme-color-2;
+        font-size: $default-font-3;
+        margin-right: 2px;
+      }
+    }
+    .comment-content {
+      font-size: $default-font;
+      color: $theme-color-4;
+      margin-bottom: 15px;
+      font-weight: $font-weight-medium;
+    }
+    .comment-reply {
+      display: -webkit-box;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      @media #{$large_mobile} {
+        display: block;
+      }
+      @media #{$small_mobile} {
+        display: block;
+      }
+      .comment__btn {
+        color: $theme-color;
+        position: relative;
+        @include transition(0.3s);
+        font-size: $default-font;
+        display: inline-block;
+        padding: 4px 22px 4px 22px;
+        border: 1px solid $color-1;
+        @include border-radius(30px);
+        font-weight: $font-weight-medium;
+        &:hover {
+          color: $color-light;
+          background-color: $theme-color-2;
+          border-color: $theme-color-2;
+        }
+      }
+      .helpful__btn {
+        color: $theme-color-4;
+        font-size: $default-font-3;
+        font-weight: $font-weight-medium;
+        @media #{$large_mobile} {
+          margin-top: 25px;
+        }
+        @media #{$small_mobile} {
+          margin-top: 25px;
+        }
+        a {
+          border: 1px solid rgba(128, 137, 150, 0.4);
+          @include border-radius(4px);
+          padding: 4px 12px;
+          color: $theme-color-4;
+          margin-left: 3px;
+          margin-right: 3px;
+          @include transition(0.3s);
+          display: inline-block;
+          line-height: 20px;
+          i {
+            color: $theme-color-2;
+          }
+          &:hover {
+            background-color: rgba(128, 137, 150, 0.1);
+            color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+}
+.comments-reply {
+  margin-left: 130px;
+  @media #{$large_mobile} {
+    margin-left: 0;
+  }
+  @media #{$small_mobile} {
+    margin-left: 0;
+  }
+}
+
+.comments-wrapper {
+  margin-top: 57px;
+  .comments-title {
+    font-size: $display-6;
+    color: $theme-color;
+    font-weight: $font-weight-bold;
+    margin-bottom: 33px;
+  }
+  .leave-title {
+    margin-top: 60px;
+    margin-bottom: 7px;
+  }
+  .leave-desc {
+    font-size: $default-font;
+    color: $theme-color-4;
+    font-weight: $font-weight-medium;
+  }
+  .contact-form-action {
+    margin-top: 36px;
+    padding-left: 0;
+    .form-group {
+      .message-control {
+        height: 170px;
+      }
+    }
+  }
+}

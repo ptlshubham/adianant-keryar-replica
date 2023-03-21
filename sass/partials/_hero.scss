@@ -1,0 +1,279 @@
+/*====================================================
+    slider-area
+ ====================================================*/
+.slider-area {
+  position: relative;
+  z-index: 1;
+  color: $color-light;
+  .rev_slider {
+    .slotholder {
+      &:before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: rgba(59,62,121,.6);
+        z-index: 99;
+      }
+    }
+    .tp-caption {
+      @media #{$large_mobile_three} {
+        padding-left: 8px !important;
+      }
+      .sec__title {
+        font-size: $display;
+        font-weight: $font-weight-bold;
+        line-height: 76px;
+        color: $color-light;
+        @media #{$tab_device} {
+          font-size: $display-11;
+          line-height: $title-height2;
+        }
+        @media #{$large_mobile} {
+          font-size: $display-15;
+          line-height: $title-height3;
+        }
+        @media #{$large_mobile_three} {
+          font-size: $display-6;
+          line-height: 42px;
+          margin-top: 10px !important;
+        }
+        @media #{$small_mobile_five} {
+          margin-top: 0 !important;
+        }
+      }
+      .hero__title {
+        @media #{$large_mobile_three} {
+          margin-top: 20px !important;
+        }
+        @media #{$small_mobile_four} {
+          margin-top: 0 !important;
+        }
+      }
+      .sec__desc {
+        font-size: $display-2;
+        font-weight: $font-weight-medium;
+        line-height: $text-height-3;
+        @media #{$small_mobile_four} {
+          font-size: $default-font;
+          line-height: $text-height-2;
+        }
+      }
+      .sec__desc2 {
+        @media #{$large_mobile_three} {
+          margin-top: 10px !important;
+        }
+        @media #{$small_mobile_four} {
+          margin-top: 5px !important;
+        }
+      }
+      .btn-box {
+        .theme-button {
+          background-color: $color-light;
+          color: $theme-color;
+          &:hover {
+            background-color: $theme-color-2;
+            color: $color-light;
+          }
+          &:nth-child(2) {
+            margin-left: 10px;
+            background-color: $theme-color-2;
+            color: $color-light;
+          }
+        }
+      }
+    }
+    .revo-slider-inner {
+      .tp-parallax-wrap {
+        .tp-loop-wrap {
+          .tp-mask-wrap {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .tparrows {
+      background-color: $color-light;
+      color: $theme-color;
+      @include border-radius(50%);
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      top: auto !important;
+      left: auto !important;
+      right: -15px;
+      bottom: 18px;
+      @include transition(0.3s);
+      @media #{$large_mobile_three} {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        right: -20px;
+        bottom: -5px;
+      }
+      @media #{$small_mobile_two} {
+        right: -45px;
+      }
+      &:before {
+        color: $theme-color;
+        font-size: $display-4;
+        line-height: 50px;
+        font-family: "FontAwesome";
+        @media #{$large_mobile_three} {
+          line-height: 40px;
+        }
+        @media #{$small_mobile_two} {
+          line-height: 40px;
+        }
+      }
+      &:hover {
+        background-color: $theme-color-2;
+        &:before {
+          color: $color-light;
+        }
+      }
+    }
+    .tp-leftarrow {
+      right: 40px;
+      @media #{$large_mobile_three} {
+        right: 25px;
+      }
+      @media #{$small_mobile_two} {
+        right: 0;
+      }
+      &:before {
+        content: "\f104";
+      }
+    }
+    .tp-rightarrow {
+      &:before {
+        content: "\f105";
+      }
+    }
+  }
+}
+
+/*====================================================
+    slider-area2
+ ====================================================*/
+.slider-area2 {
+  .rev_slider {
+    .tparrows {
+      bottom: 40%;
+      @include border-radius(50%);
+      right: -10px;
+      @media #{$laptop_m} {
+        right: -30px;
+      }
+      @media #{$laptop_m_two} {
+        right: -50px;
+      }
+      @media #{$large_mobile_two} {
+        bottom: 0;
+        right: auto;
+        left: 135px !important;
+      }
+    }
+    .tp-leftarrow {
+      right: auto;
+      left: 130px !important;
+      @media #{$laptop_m} {
+        left: 111px !important;
+      }
+      @media #{$laptop_m_two} {
+        left: 90px !important;
+      }
+    }
+  }
+}
+
+/*====================================================
+    slider-area 3
+ ====================================================*/
+.slider-area3 {
+  .rev_slider {
+    .slotholder {
+      &:before {
+        background-color: rgba(35,61,99,.8);
+      }
+    }
+    .tp-caption {
+      @media #{$large_mobile_three} {
+        padding-top: 100px !important;
+        padding-left: 0 !important;
+      }
+      @media #{$small_mobile_two} {
+        padding-top: 130px !important;
+      }
+      .sec__title {
+        font-size: 75px;
+        line-height: 85px;
+        font-weight: $font-weight-light;
+        @media #{$large_mobile} {
+          font-size: 50px;
+          line-height: 65px;
+        }
+        @media #{$small_mobile} {
+          font-size: 50px;
+          line-height: 65px;
+        }
+        span {
+          font-weight: $font-weight-bold;
+          @media #{$large_mobile} {
+            font-size: 50px;
+          }
+          @media #{$small_mobile} {
+            font-size: 50px;
+          }
+        }
+      }
+      .btn-box {
+        .theme-button {
+          background-color: $theme-color-2;
+          color: $color-light;
+          &:hover {
+            background-color: $color-light;
+            color: $theme-color;
+          }
+          &:nth-child(2) {
+            background-color: transparent;
+            border: 1px solid $color-light;
+            &:hover {
+              background-color: $color-light;
+              color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+    .tparrows {
+      bottom: 45%;
+      background-color: rgba(255, 255, 255, 0.1);
+      @media #{$large_mobile_three} {
+        bottom: 10px;
+      }
+      &:before {
+        color: $color-light;
+      }
+    }
+    .tp-leftarrow {
+      right: -16px;
+      bottom: 39%;
+      @media #{$large_mobile_three} {
+        bottom: 10px;
+        right: 39%;
+      }
+      @media #{$small_mobile_two} {
+       right: 34%;
+      }
+    }
+    .tp-rightarrow {
+      @media #{$large_mobile_three} {
+        right: 29%;
+      }
+      @media #{$small_mobile_two} {
+        right: 20%;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/*====================================================
+    back to top
+ ====================================================*/
+#back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  @include border-radius(24px);
+  background-color: $color-light;
+  color: $theme-color;
+  @include box-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
+  font-size: $display-4;
+  @include transition(0.5s);
+  cursor: pointer;
+  opacity: 1;
+  visibility: hidden;
+  @include transform(scale(0));
+  border: 1px solid $color-2;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+  &:hover {
+    background-color: $theme-color-2;
+    color: $color-light;
+    border-color: $theme-color-2;
+  }
+  &.back-btn-shown {
+    opacity: 1;
+    visibility: visible;
+    @include transform(scale(1));
+  }
+}
