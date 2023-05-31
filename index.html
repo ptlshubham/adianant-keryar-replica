@@ -39,8 +39,9 @@
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ccc;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 8px rgba(29, 27, 27, 0.15);
             z-index: 9999;
+            align-items: center;
         }
 
         .overlay {
@@ -52,6 +53,11 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 9998;
+        }
+        .container-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -66,8 +72,15 @@
     </div>
     <!-- end per-loader -->
     <div id="popup" class="popup">
-        <img src="images/about-img.jpg" alt="about us" class="about-img">
-        <button onclick="closePopup()">Close</button>
+        <img src="images/certificate.png" alt="about us" class="about-img">
+        <div class="container-button">
+        <button onclick="closePopup()" style="color: white;">
+            <a class="theme-button">
+                Close<i class="fa fa-angle-right btn-icon"></i>
+            </a>
+        </button>
+       
+    </div>
     </div>
 
     <div id="overlay" class="overlay"></div>
