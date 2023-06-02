@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.style.display = "block";
 
     // Set the cookie to indicate that the popup has been shown
-    setCookie("popupShown", true, 365); // Cookie expires in 365 days
+    setCookie("popupShown", true, 1); // Cookie expires in 1 day
   }
 });
 
@@ -24,14 +24,11 @@ function closePopup() {
 }
 
 // Helper function to set a cookie
-function setCookie(name, value, days) {
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+function setCookie(name, value) {
+  var date = new Date();
+  date.setTime(date.getTime() + 24 * 60 * 60 * 1000); // Set the cookie to expire after 1 day
+  var expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
 // Helper function to get a cookie
